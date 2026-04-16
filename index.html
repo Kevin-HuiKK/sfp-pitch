@@ -393,31 +393,54 @@
   <h2 class="fade-up"><span class="highlight">SFP Ontology Platform</span> &mdash; Technical View</h2>
   <div class="two-col">
     <div class="fade-up">
-      <div class="mermaid">
-        flowchart TB
-          subgraph Sources ["SOURCES"]
-            direction LR
-            FRESH["Fresh Legacy"]
-            POS["POS Terminals"]
-            WMS["WMS Events"]
-            REP["Rep Phones"]
-            FIN["Finance"]
-          end
-          subgraph Warehouse ["WAREHOUSE"]
-            direction LR
-            SLAVE["Local Slave DB"]
-            BQ[("BigQuery")]
-            JOB["Nightly Jobs"]
-          end
-          subgraph Intelligence ["INTELLIGENCE"]
-            direction LR
-            KPI["KPI Dashboards"]
-            SOM["Data Insight"]
-            ATLAS["Relation Atlas"]
-            DRIVE["SFP Drive iOS"]
-          end
-          Sources --> Warehouse --> Intelligence
-      </div>
+      <svg viewBox="0 0 960 380" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; max-height:380px;">
+        <!-- Layer 1: SOURCES -->
+        <text x="20" y="54" fill="#104E44" font-size="13" font-weight="800" font-family="Inter">SOURCES</text>
+        <g font-family="Inter">
+          <rect x="140" y="30" width="140" height="48" rx="8" fill="#86BC25"/>
+          <text x="210" y="59" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Fresh Legacy</text>
+          <rect x="300" y="30" width="140" height="48" rx="8" fill="#86BC25"/>
+          <text x="370" y="59" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">POS Terminals</text>
+          <rect x="460" y="30" width="140" height="48" rx="8" fill="#86BC25"/>
+          <text x="530" y="59" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">WMS Events</text>
+          <rect x="620" y="30" width="140" height="48" rx="8" fill="#86BC25"/>
+          <text x="690" y="59" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Rep Phones</text>
+          <rect x="780" y="30" width="140" height="48" rx="8" fill="#86BC25"/>
+          <text x="850" y="59" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Finance</text>
+        </g>
+        <!-- Arrow 1 -->
+        <g stroke="#86BC25" stroke-width="2.5" fill="#86BC25">
+          <line x1="480" y1="85" x2="480" y2="135" />
+          <polygon points="475,130 485,130 480,142" stroke="none"/>
+        </g>
+        <!-- Layer 2: WAREHOUSE -->
+        <text x="20" y="176" fill="#104E44" font-size="13" font-weight="800" font-family="Inter">WAREHOUSE</text>
+        <g font-family="Inter">
+          <rect x="220" y="152" width="180" height="48" rx="8" fill="#104E44"/>
+          <text x="310" y="181" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Local Slave DB</text>
+          <ellipse cx="490" cy="176" rx="46" ry="26" fill="#104E44"/>
+          <text x="490" y="181" fill="#fff" font-size="12" font-weight="800" text-anchor="middle">BigQuery</text>
+          <rect x="580" y="152" width="180" height="48" rx="8" fill="#104E44"/>
+          <text x="670" y="181" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Nightly Jobs</text>
+        </g>
+        <!-- Arrow 2 -->
+        <g stroke="#86BC25" stroke-width="2.5" fill="#86BC25">
+          <line x1="480" y1="207" x2="480" y2="257" />
+          <polygon points="475,252 485,252 480,264" stroke="none"/>
+        </g>
+        <!-- Layer 3: INTELLIGENCE -->
+        <text x="20" y="298" fill="#104E44" font-size="13" font-weight="800" font-family="Inter">INTELLIGENCE</text>
+        <g font-family="Inter">
+          <rect x="180" y="274" width="160" height="48" rx="8" fill="#3AEA37"/>
+          <text x="260" y="303" fill="#104E44" font-size="12" font-weight="800" text-anchor="middle">KPI Dashboards</text>
+          <rect x="360" y="274" width="160" height="48" rx="8" fill="#3AEA37"/>
+          <text x="440" y="303" fill="#104E44" font-size="12" font-weight="800" text-anchor="middle">Data Insight</text>
+          <rect x="540" y="274" width="160" height="48" rx="8" fill="#3AEA37"/>
+          <text x="620" y="303" fill="#104E44" font-size="12" font-weight="800" text-anchor="middle">Relation Atlas</text>
+          <rect x="720" y="274" width="180" height="48" rx="8" fill="#3AEA37"/>
+          <text x="810" y="303" fill="#104E44" font-size="12" font-weight="800" text-anchor="middle">SFP Drive iOS</text>
+        </g>
+      </svg>
     </div>
     <div class="fade-up">
       <h3>Why This Is a Moat</h3>
