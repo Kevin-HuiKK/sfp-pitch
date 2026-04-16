@@ -221,7 +221,7 @@
         </linearGradient>
       </defs>
       <rect x="40" y="15" width="900" height="150" rx="16" fill="url(#platGrad)" stroke="#104E44" stroke-width="2.5"/>
-      <text x="490" y="46" fill="#104E44" font-size="18" font-weight="800" text-anchor="middle" font-family="Space Grotesk">SFP Unified Data + AI Platform</text>
+      <text x="490" y="46" fill="#104E44" font-size="18" font-weight="800" text-anchor="middle" font-family="Space Grotesk">SFP Ontology Platform</text>
       <g font-family="Inter">
         <rect x="70" y="65" width="200" height="88" rx="10" fill="#fff" stroke="#86BC25" stroke-width="1.8"/>
         <text x="170" y="92" fill="#104E44" font-size="13" font-weight="800" text-anchor="middle">DATA LAYER</text>
@@ -346,6 +346,7 @@
   <div class="two-col">
     <div class="fade-up">
       <h3>Ontology-Driven Skill Distillation</h3>
+      <p style="font-size:0.9rem; color:var(--sfp-text-light); margin-bottom:0.8rem;">Powered by the <strong style="color:var(--sfp-green-dark);">SFP Ontology Platform</strong> &mdash; the same spine behind every solution in this deck.</p>
       <ul class="bullets">
         <li>Every winning deal is captured and <strong>distilled</strong> into role-specific playbooks</li>
         <li>Failing strategies are <strong>automatically attenuated</strong></li>
@@ -389,38 +390,33 @@
     <img src="assets/logo/sfp-logo.svg" alt="SFP" class="logo-small" style="filter: brightness(0.3);">
     <span class="chapter-label">Chapter 7 &mdash; Architecture</span>
   </div>
-  <h2 class="fade-up">Three-Layer Architecture &mdash; <span class="highlight">Our Moat</span></h2>
+  <h2 class="fade-up"><span class="highlight">SFP Ontology Platform</span> &mdash; Technical View</h2>
   <div class="two-col">
     <div class="fade-up">
       <div class="mermaid">
-        flowchart LR
-          subgraph Sources
+        flowchart TB
+          subgraph Sources ["SOURCES"]
+            direction LR
             FRESH["Fresh Legacy"]
             POS["POS Terminals"]
             WMS["WMS Events"]
             REP["Rep Phones"]
             FIN["Finance"]
           end
-          subgraph Warehouse
+          subgraph Warehouse ["WAREHOUSE"]
+            direction LR
             SLAVE["Local Slave DB"]
-            BQ[("BigQuery\nsfp_app_cache")]
+            BQ[("BigQuery")]
             JOB["Nightly Jobs"]
           end
-          subgraph Intelligence
+          subgraph Intelligence ["INTELLIGENCE"]
+            direction LR
             KPI["KPI Dashboards"]
             SOM["Data Insight"]
             ATLAS["Relation Atlas"]
             DRIVE["SFP Drive iOS"]
           end
-          FRESH-->SLAVE-->BQ
-          POS-->BQ
-          WMS-->BQ
-          FIN-->BQ
-          BQ-->JOB-->BQ
-          BQ-->KPI
-          BQ-->SOM
-          BQ-->ATLAS
-          BQ-->DRIVE
+          Sources --> Warehouse --> Intelligence
       </div>
     </div>
     <div class="fade-up">
@@ -490,8 +486,8 @@
   <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:0.9rem; margin-top:1.5rem;">
     <div class="card fade-up" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-top:3px solid #3AEA37; padding:1.1rem;">
       <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.12em; color:#3AEA37; font-weight:800;">Risk 1</div>
-      <h3 style="font-size:1rem; margin-top:0.4rem;">Perishable Leverage</h3>
-      <p style="font-size:0.8rem; opacity:0.86;">Our BigQuery foundation depreciates monthly if we don't layer AI on top. Data is electricity &mdash; an unused power grid still costs money to maintain.</p>
+      <h3 style="font-size:1rem; margin-top:0.4rem;">Abandoning What's Built</h3>
+      <p style="font-size:0.8rem; opacity:0.86;">Stage 1 is live but still maturing. Without continued investment, what we've built goes un-maintained and decays &mdash; we'd end up rebuilding from scratch, paying twice for the same foundation.</p>
     </div>
     <div class="card fade-up" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-top:3px solid #3AEA37; padding:1.1rem;">
       <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.12em; color:#3AEA37; font-weight:800;">Risk 2</div>
@@ -600,8 +596,7 @@
   </div>
   <h2 class="fade-up" style="text-align:center;">The Ask &amp; <span class="highlight">The Return</span></h2>
   <p class="fade-up" style="text-align:center; font-size:1.05rem; color:rgba(255,255,255,0.7); margin-bottom:2rem;">
-    A modest continued investment in the data + AI team for the next 12 months.<br>
-    Cloud spend is minor: BigQuery + Gemini API, single-digit $K per month at current scale.
+    A modest continued investment in the data + AI team for the next 12 months.
   </p>
   <div class="horizon-grid fade-up">
     <div class="horizon-card">
