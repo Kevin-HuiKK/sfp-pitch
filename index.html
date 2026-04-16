@@ -9,6 +9,35 @@
 </head>
 <body>
 
+<!-- Password gate -->
+<div id="gate" style="position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,#104E44,#0a2e1f);display:flex;align-items:center;justify-content:center;">
+  <div style="text-align:center;">
+    <img src="assets/logo/sfp-logo.svg" alt="SFP" style="width:200px;margin-bottom:2rem;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.3));">
+    <div style="color:rgba(255,255,255,0.6);font-family:Inter,sans-serif;font-size:0.9rem;margin-bottom:1rem;">Enter access code to continue</div>
+    <form id="gateForm" style="display:flex;gap:0.5rem;justify-content:center;">
+      <input id="gateInput" type="password" autofocus autocomplete="off"
+        style="padding:0.7rem 1.2rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:#fff;font-size:1rem;font-family:Inter,sans-serif;width:180px;outline:none;"
+        placeholder="Access code">
+      <button type="submit"
+        style="padding:0.7rem 1.5rem;border-radius:8px;border:none;background:#86BC25;color:#fff;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:Inter,sans-serif;">Enter</button>
+    </form>
+    <div id="gateError" style="color:#FD1A17;font-size:0.8rem;margin-top:0.75rem;font-family:Inter,sans-serif;opacity:0;transition:opacity 0.3s;"></div>
+  </div>
+</div>
+<script>
+(function(){
+  var h='581c4ee2';
+  function s(p){var x=0;for(var i=0;i<p.length;i++){x=((x<<5)-x)+p.charCodeAt(i);x|=0;}return(x>>>0).toString(16);}
+  if(sessionStorage.getItem('sfp_ok')==='1'){document.getElementById('gate').style.display='none';}
+  document.getElementById('gateForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=document.getElementById('gateInput').value;
+    if(s(v)===h){sessionStorage.setItem('sfp_ok','1');document.getElementById('gate').style.display='none';}
+    else{var er=document.getElementById('gateError');er.textContent='Incorrect code';er.style.opacity='1';document.getElementById('gateInput').value='';document.getElementById('gateInput').focus();}
+  });
+})();
+</script>
+
 <!-- ============================================================ -->
 <!-- CHAPTER 1 — COVER                                            -->
 <!-- ============================================================ -->
