@@ -1,0 +1,32 @@
+{
+  "market_size": {
+    "fact": "Australian Fruit & Vegetable Wholesaling industry is valued at A$12.6 billion in 2026, with 1,474 businesses.",
+    "source_title": "IBISWorld — Fruit and Vegetable Wholesaling in Australia",
+    "source_url": "https://www.ibisworld.com/australia/industry/fruit-and-vegetable-wholesaling/369/"
+  },
+  "llm_cost_decline": {
+    "fact": "LLM inference costs declined 10x annually. GPT-4-equivalent performance now costs $0.40/million tokens vs $20 in late 2022 — a 50x drop. Price to match GPT-4 on PhD-level benchmarks fell 40x per year.",
+    "source_title": "Epoch AI — LLM Inference Price Trends",
+    "source_url": "https://epoch.ai/data-insights/llm-inference-price-trends/"
+  },
+  "invoice_ocr_roi": {
+    "fact": "AP automation reduces cost per invoice from $12–$30 to $1–$5 (60–80% reduction). Processing time drops from 15 min to 3 min per invoice. Error rates fall from 1–3% to 0.1–0.5%. Most teams see positive ROI within 6 months.",
+    "source_title": "Artsyl — Invoice Processing Automation ROI Guide",
+    "source_url": "https://www.artsyltech.com/blog/invoice-processing-automation-guide"
+  },
+  "ai_sales_coaching": {
+    "fact": "Companies using AI sales coaching report 25% boost in productivity and 15% drop in sales costs. Teams using Gong AI achieved 26–35% higher win rates. 83% of AI-enabled sales teams saw revenue growth vs 66% without AI (Salesforce).",
+    "source_title": "Salesforce — Sales AI Statistics 2024",
+    "source_url": "https://www.salesforce.com/news/stories/sales-ai-statistics-2024/"
+  },
+  "warehouse_automation_roi": {
+    "fact": "AMRs deliver payback in under 24 months with ROI above 250%. Picking automation sees returns within 2–3 years. Over 450,000 logistics robots sold globally in 2025, up from 75,000 in 2019 (500% increase).",
+    "source_title": "Sellers Commerce — Warehouse Automation Statistics 2026",
+    "source_url": "https://www.sellerscommerce.com/blog/warehouse-automation-statistics/"
+  },
+  "bcg_ai_supply_chain": {
+    "fact": "One global industrial goods company unlocked a 2 percentage-point EBITDA boost in just two years by embedding agentic AI into daily workflows. Warehouse automation market expected to reach $41B by 2027 (CAGR ~15%).",
+    "source_title": "BCG — Amplify Your Warehouse Automation ROI",
+    "source_url": "https://www.bcg.com/publications/2023/amplify-warehouse-automation-roi"
+  }
+}
