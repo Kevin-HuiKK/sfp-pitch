@@ -1,0 +1,82 @@
+/* ===== V2 PRESENTATION MODE — Big Screen Overrides ===== */
+
+/* Titles: much bigger for projection */
+h1 { font-size: 5rem; letter-spacing: -0.02em; }
+h2 { font-size: 3.8rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.8rem; }
+
+/* Key points: bolder */
+.bullets li { font-size: 1.2rem; font-weight: 500; }
+strong { font-weight: 800; }
+
+/* Explanatory small text: smaller so slides breathe */
+.pain-card p { font-size: 0.78rem !important; line-height: 1.45; }
+.source { font-size: 0.6rem; }
+.data-table { font-size: 0.75rem; }
+.data-table td, .data-table th { padding: 0.5rem 0.75rem; }
+.tagline { font-size: 1.4rem; }
+.quote { font-size: 1.4rem; padding: 1.2rem 2rem; }
+
+/* Slide padding: more breathing room */
+.slide { padding: 4rem 6rem; }
+
+/* Cover: hero treatment */
+.cover-logo { width: 400px; }
+
+/* Cards: slightly larger text for readability */
+.card h3 { font-size: 1.3rem; }
+
+/* Pain labels bigger */
+.pain-card .label { font-size: 0.75rem; letter-spacing: 0.1em; }
+
+/* Hero image backgrounds */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slide-dark .hero-bg,
+.slide-gradient .hero-bg {
+  opacity: 0.12;
+}
+
+.slide > *:not(.hero-bg):not(.slide-header) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Timeline stages bigger */
+.timeline-stage .stage-title { font-size: 1.5rem; }
+.timeline-stage .stage-num { font-size: 4rem; }
+
+/* Horizon cards */
+.horizon-card h3 { font-size: 1.3rem; }
+.horizon-label { font-size: 0.85rem; }
+
+/* Three-col cards: ensure breathing room */
+.three-col { gap: 1.5rem; }
+
+/* Version badge */
+.version-badge {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 200;
+  background: rgba(0,0,0,0.5);
+  color: rgba(255,255,255,0.6);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-family: Inter, sans-serif;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.version-badge:hover {
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+}
