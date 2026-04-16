@@ -64,6 +64,85 @@ strong {
   object-fit: cover;
 }
 
+/* Pain grid — 3x2 tiles */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.pain-tile {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-left: 4px solid #FD1A17;
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
+}
+.pain-tile .pain-tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #FD1A17;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+.pain-tile h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.25;
+}
+.pain-tile p {
+  font-size: 0.82rem;
+  opacity: 0.88;
+  line-height: 1.45;
+}
+
+/* Platform diagram */
+.platform-diagram {
+  margin: 1rem 0;
+}
+.platform-diagram svg {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+}
+
+/* Cost of waiting grid */
+.cost-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+.cost-tile {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-top: 3px solid var(--sfp-green-bright);
+  border-radius: 10px;
+  padding: 1.1rem 1.1rem;
+}
+.cost-tile .cost-tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sfp-green-bright);
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+.cost-tile h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.25;
+}
+.cost-tile p {
+  font-size: 0.8rem;
+  opacity: 0.86;
+  line-height: 1.45;
+}
+
 /* Version badge */
 .version-badge {
   position: fixed;
